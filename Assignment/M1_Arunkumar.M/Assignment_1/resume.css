@@ -1,0 +1,41 @@
+.photo{
+    border-radius: 0px;
+    width:200px;
+    margin-top: auto;
+    display: inline-block;
+
+   
+}
+.personal{
+    color:yellow;
+    text-decoration: underline;
+}
+table {
+    border-collapse: collapse;
+    width: 30%;
+    display: inline-block;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+    color:aliceblue;
+  }
+  tr:hover {
+    background-color: gold
+}
+ul {
+    list-style: none;
+  }
+ul li:before {
+    content: '✓';
+    line-height: 50px;
+  }
+.tablefont1{
+    width:500px;
+}
+.blood{
+    padding-left: 50px;
+    width:300px;
+    color:white;
+}
