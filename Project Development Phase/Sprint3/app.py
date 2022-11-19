@@ -5,7 +5,7 @@ import os
 import mail
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import *
-conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=19af6446-6171-4641-8aba-9dcff8e1b6ff.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=30699;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=xst23649;PWD=bKigkwntEUnt56mj",'','')
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=<hostname>;PORT=<PORT NUMBER>;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=<UID>;PWD=<PASSWORD>,'','')
 
 app = Flask(__name__)
 app.secret_key = "arun"
@@ -128,7 +128,7 @@ def expenditure():
     mail = Mail(from_email, to_email, subject, content)
 
     try:
-      sg = SendGridAPIClient('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')
+      sg = SendGridAPIClient('<YOUR API KEY>')
       response = sg.send(mail)
       print(response.status_code)
       print(response.body)
