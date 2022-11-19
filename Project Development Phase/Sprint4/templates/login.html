@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+  
+  <h1 style="margin-bottom:100px">Personal Expense Tracker</h1>
+<div class="container">
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+      <div class="form-control">
+        <input type="email" name="email" required>
+            <label>Username</label>
+      </div>
+        <div style="color:red">{{msg}}</div>
+        <div style="color:{{color}}">{{msg1}}</div>
+      <div class="form-control">
+        <input type="password" name="password" required>
+        <label>Password</label>
+      </div>
+      <button class="btn">LOGIN</button>
+        <span style="margin-left:70%;text-decoration:underline;"><a href="/registration" style="color:white" class="reg">REGISTER</a></span>
+    </form>
+  </div>
+  <script src="{{ url_for('static', filename='css/js.js') }}"></script>
+</body>
+</html>
+
+
+
+
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">-->

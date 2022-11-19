@@ -1,0 +1,109 @@
+.whole-page{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color:black;
+    height:800px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.one:hover{
+    background-color: 	#00ff40;
+}
+.two:hover{
+    background-color: #0000ff;
+}
+.three:hover{
+    background-color: red;
+}
+.four:hover{
+    background-color: rgb(235, 138, 18);
+
+}
+.five:hover{
+    background-color:  #ff661a;
+}
+.six:hover{
+    background-color: rgb(191, 215, 34);
+}
+.seven:hover{
+    background-color: #ff0066;
+
+}
+.eight:hover{
+    background-color:  #00cc00;
+}
+.nine:hover{
+    background-color: brown;
+}
+.z{
+    display: grid;
+    grid-template-rows:1fr 4fr 1fr;
+    height:100%;
+}
+.first{
+    margin-top: 20px;
+    text-align: center;
+}
+button{
+    height:40px;
+    background-color: 	#00cccc;
+    border-color: rgb(25, 104, 208);
+    border-style: solid;
+    border-radius:3px;
+    border-width: 1px;
+    padding-left:15px;
+    padding-right:15px;
+}
+button:hover{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(25, 104, 208);
+    color:white;
+}
+button:active{
+    opacity:0.7;
+}
+p{
+    margin-top:100px;
+    font-family: cursive;
+}
+div{
+    text-align: center;
+}
+.sel{
+    height:40px;
+}
+input{
+    height:30px;
+}
+p{
+color:white;
+font-size:30px;
+}
+p:hover{
+color:gold;
+}
+body{
+background-color:black;
+}
+h1{
+font-family: cursive;
+color:white;
+}
+h1:hover{
+color:gold;
+}
+a{
+text-decoration:none;
+color:black;
+}
+a:hover{
+color:white;
+text-decoration:none;
+}
+.y{
+margin-top:50px;
+}
+.s{
+border-bottom:solid;
+border-color:gold;
+}
