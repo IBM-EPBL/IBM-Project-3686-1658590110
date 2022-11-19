@@ -1,0 +1,82 @@
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: #369;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+body {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.top{
+display:grid;
+grid-template-columns:1fr 1fr 1fr 1fr;
+margin-top:100px;
+margin-left:50px;
+}
+.heading{
+background-color:black;
+height:100px;
+text-align:center;
+color:yellow;
+margin-top:0px;
+}
+.join{
+        background-color: white;
+        color:black;
+        height:36px;
+        width: 65px;
+        border-color: white;
+        border-radius:3px;
+        border-width: 1.5px;
+        border-style:solid;
+        cursor:pointer;
+        margin-right:8px ;
+        transition:background-color 0.5s,color 0.5s;
+    }
+    .join:hover{
+        background-color:#ffae42;
+        color:red;
+        border-color: yellow;
+    }
+    .join:active{
+        opacity:0.7;
+    }
+    a{
+    text-decoration:none;
+    }
+    a:hover{
+        color:red;
+    }

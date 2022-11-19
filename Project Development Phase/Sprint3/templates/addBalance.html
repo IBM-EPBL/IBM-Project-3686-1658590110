@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog card design 2021</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/addBalance.css') }}">
+</head>
+
+<body>
+	<div class="container">
+		<div class="cards grid-row">
+			<div class="card">
+				<div class="card-top">
+					<img src="{{ url_for('static', filename='css/img 1.jpg') }}" alt="Blog Name">
+				</div>
+				<div class="card-info">
+					<h2>CREDIT AMOUNT</h2>
+					<p class="excerpt">A credit card statement is a summary of how you've used your credit card for a billing period. If you’ve ever looked at credit card statements, you know how difficult they can be to read. Credit card statements are filled with terms, numbers and percentages that play a role in the calculation of your total credit card balance.</p>
+				</div>
+				<div class="card-bottom flex-row">
+				<form action="\adder" method="POST">
+					Enter to amount to be credited:
+  				<input type="text" placeholder="can add upto 100000" name="money">
+  				<input class ="join" type="submit">
+				</form>
+				<a href="/dashboard">Back</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-top">
+					<img src="{{ url_for('static', filename='css/img 2.jpg') }}" alt="Blog Name">
+				</div>
+				<div class="card-info">
+					<h2>EXPENSE AMOUNT</h2>
+					<p class="excerpt">An expense statement (also known as expense reports) is a formal business document detailing and itemizing financial transactions, cash flows, and expenses. Companies usually make use of expense statements to reimburse the travel expenses incurred by an employee during a business-related trip.</p>
+				</div><br>
+				<div class="card-bottom flex-row">
+					<h2>BALANCE AMOUNT = {{balance+"₹"}}</h2>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-top">
+					<img src="{{ url_for('static', filename='css/img3.jpg') }}" alt="Blog Name">
+				</div>
+				<div class="card-info">
+					<h2>BALANCE AMOUNT</h2>
+					<p class="excerpt">he statement balance represents the total amount the consumer owes to the creditor. This balance adjusts each month based on the transactions that occurred since the company printed the previous invoice. Consumers may pay the complete statement balance to bring the balance to zero and eliminate future payments, but this is not required.</p>
+				</div>
+				<div class="card-bottom flex-row">
+					<h2>TOTAL EXPENSES = {{total+"₹"}}</h2>
+				</div>
+			</div>
+			
+		</div>		
+	</div>
+</body>
+
+</html>

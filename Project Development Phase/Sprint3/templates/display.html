@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DISPLAY</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/display.css') }}">
+</head>
+<body style="background-color:black">
+<div class="heading"><h1 style="padding-top:40px;">Expense Tracker</h1></div>
+<hr style="background-color:white">
+<div class="top">
+    <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{medical}};color:{{medical_color}};--fg:{{medical_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">medical</span></div>
+
+    <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{education}};color:{{education_color}};--fg:{{education_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Education</span></div>
+    <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{rent}};color:{{rent_color}};--fg:{{rent_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Rent</span></div>
+    <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{travel}};color:{{travel_color}};--fg:{{travel_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Travel</span></div>
+</div>
+<div class="top">
+    <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{food}};color:{{food_color}};--fg:{{food_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Food</span></div>
+ <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{others}};color:{{others_color}};--fg:{{others_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Others</span></div>
+
+  <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{spend}};color:{{spend_color}};--fg:{{spend_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Expense</span></div>
+  <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value:{{balance}};color:{{balance_color}};--fg:{{balance_color}};position:relative;"><span style="font-size:30px;position:absolute;top:200px;">Balance</span></div>
+</div>
+<button class="join" style="margin-top:100px;margin-left:50%;"><a href="/dashboard">Back</a></button>
+</body>
+</html>

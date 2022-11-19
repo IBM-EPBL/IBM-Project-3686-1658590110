@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Simple web Development Template</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			margin-left:0px;
+		}
+
+		.logo {
+			padding-left:0px;
+		}
+
+
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+		.firstsection {
+			height: 300px;
+		}
+
+		.secondsection {
+			height: 400px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color:#EF32D9;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family:cursive;
+			font-weight: bold;
+			font-size: 30px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			max-width: 90%;
+			margin: auto;
+			margin-bottom:0px;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+			padding-bottom:0px;
+		}
+
+		.thumbnail img {
+			width: 300px;
+			border: 2px solid black;
+			border-radius: 26px;
+			height:300px;
+			margin-top: 19px;
+			margin-bottom:0px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family:cursive;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+		a{
+		font-family:cursive;
+		}
+	</style>
+	<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "c2c9a400-7a72-450d-a999-8a644f36dd44", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "9aec5edf-6170-4cd9-bcb5-dd4a533e2b4e", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</head>
+
+<body style ="background: radial-gradient(circle at 0.8% 3.1%, rgb(255, 188, 224) 0%, rgb(170, 165, 255) 46%, rgb(165, 255, 205) 100.2%);">
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src="{{ url_for('static', filename='css/one.png') }}" style="height:50px;width:50px;margin-left:0px;margin-top:10px">
+			</div>
+			<li><a href="/profile">Profile</a></li>
+			<li><a href="/expenses">Expenses</a></li>
+			<li><a href="/display">Display</a></li>
+			<li><a href="/addBalance">Add Balance</a></li>
+			<li><a href="/login">Logout</a></li>
+		</ul>
+
+		
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="web" style="line-height:100px;">Personal Expense Tracker</h1>
+				<p class="text-small" style="line-height:30px;color:black">
+					Expense management refers to the systems deployed by a business to process, pay, and audit employee-initiated expenses. These costs include, but are not limited to, expenses incurred for travel and entertainment. Expense management includes the policies and procedures that govern such spending, as well as the technologies and services utilized to process and analyze the data associated with it.
+            Software to manage the expense claim, authorization, audit and repayment processes can be obtained from organizations that provide a licensed software, implementation and support service, or alternatively, from software as a service (SaaS) providers. SaaS providers offer on-demand web-based applications managed by a third party to improve the productivity of expense management.
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="paras">
+			<h1 class="sectionTag text-big" style="color:#EF32D9;line-height:100px;">Services that we provide:</h1>
+
+		 <ul style="line-height:30px;">
+                <li><P>Medical Expense</P></li>
+                <li><p>Educational Expense</p></li>
+                <li><p>Rent Expense</p></li>
+                <li><p>Travel Expense</p></li>
+                <li><p>Food Expense</p></li>
+              </ul>
+			<br>
+			 <p style="width:550px;line-height:30px;margin-left:-30px;">
+          	Personal Income-Expense Tracker is an excel template display in to easily manage your finance by recording your monthly incomes and expenses.Our expense trackers allow you to build a personal budget & see your cash balance. Getting on top of your finances comes with huge pay offs & peace of mind.
+          </p>
+
+		</div>
+
+		<div class="thumbnail">
+			<img src="{{ url_for('static', filename='css/simple.png') }}" alt="laptop image">
+		</div>
+	</section>
+	<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="program">
+					"Beware of little expenses. A small leak will sink a Great ship"
+				</h1>
+				<p class="text-small">
+
+				</p>
+
+			</div>
+		</div>
+
+
+
+	<footer class="background">
+		<p class="text-footer">
+			Copyright ©-All rights are reserved
+		</p>
+
+
+	</footer>
+</body>
+
+</html>

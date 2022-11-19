@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+
+<form action="/register" method="POST">
+
+  <h1>Sign Up</h1>
+  
+  <fieldset>
+    <legend><span class="number">1</span>Your basic info</legend>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+    <label for="name">DOB:</label>
+    <input type="date" id="name" name="dob" required>
+    <label for="name">Occupation:</label>
+    <input type="text" id="name" name="occupation" required>
+    <label>Sex:</label>
+    <input type="radio" id="under_13" value="male" name="gender"><label for="under_13" class="light">Male</label> &nbsp
+    <input type="radio" id="over_13" value="female" name="gender"><label for="over_13" class="light">Female</label><br><br>
+
+    <label for="mail">Email:</label>
+    <input type="text" id="mail" name="email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <label for="name">Initial amount:</label>
+    <input type="number" id="name" min="10000"
+           max="10000000" name="intial_amount" required >
+    <label for="name">Phone Number:</label>
+    <input type="text" id="name" name="number" title="Enter 10 digit number" pattern="[1-9]{1}[0-9]{9}" required>
+    <label for="bio">Address:</label>
+    <textarea id="bio" name="address" rows="4" columns="30" required></textarea>
+    </fieldset>
+  <button type="submit" class="bl">Sign Up</button>
+  <button type="reset" class="bl">Reset</button>
+  <a href="/logging" class="al">Already registered?</a>
+</form>
+
+</body>
+</html>
